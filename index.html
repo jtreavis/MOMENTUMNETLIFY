@@ -102,7 +102,7 @@ nav.scrolled{padding:16px 52px;background:rgba(0,0,0,.88);backdrop-filter:blur(1
 .work-title{font-size:clamp(38px,5vw,76px);font-weight:700;letter-spacing:-.03em;line-height:.95}
 .view-all{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.4);border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:4px;transition:all .3s}
 .view-all:hover{color:#fff;border-color:#fff}
-.work-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:370px 270px;gap:3px}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:370px 270px 220px;gap:3px}
 .wc{position:relative;overflow:hidden;background:#0a0a0a}
 .wc:first-child{grid-column:span 2}
 .wc-inner{width:100%;height:100%;transition:transform .65s cubic-bezier(.4,0,.2,1)}
@@ -111,6 +111,9 @@ nav.scrolled{padding:16px 52px;background:rgba(0,0,0,.88);backdrop-filter:blur(1
 .wc:hover .wc-ov{opacity:1}
 .wc-cat{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:6px}
 .wc-name{font-size:21px;font-weight:600;letter-spacing:-.01em}
+.wc--full{grid-column:span 3}
+.wc-link{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.65);border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:4px;transition:all .3s}
+.wc-link:hover{color:#fff;border-color:#fff;gap:14px}
 
 /* WHY */
 #why{padding:140px 80px;background:#fff;color:#000}
@@ -241,7 +244,7 @@ footer{padding:52px 80px;background:#000;display:flex;align-items:center;justify
   .price-card.feat{border-color:rgba(255,255,255,.1)}
   .proc-step{grid-template-columns:60px 1fr}
   .step-desc{grid-column:2}
-  .work-grid{grid-template-rows:300px 220px}
+  .work-grid{grid-template-rows:300px 220px 180px}
 }
 @media(max-width:768px){
   nav{padding:20px 24px}
@@ -255,6 +258,7 @@ footer{padding:52px 80px;background:#000;display:flex;align-items:center;justify
   .work-grid{grid-template-columns:1fr;grid-template-rows:auto}
   .wc:first-child{grid-column:span 1;height:260px}
   .wc{height:200px}
+  .wc--full{grid-column:span 1;height:160px}
   .proc-step{grid-template-columns:1fr;gap:12px}
   .step-num{display:none}
   .price-hd{flex-direction:column;align-items:flex-start;gap:16px}
@@ -529,6 +533,35 @@ footer{padding:52px 80px;background:#000;display:flex;align-items:center;justify
       <div class="wc-ov">
         <p class="wc-cat">Portfolio · Web Design</p>
         <p class="wc-name">Kairos Studio</p>
+      </div>
+    </div>
+
+    <!-- FRP COLLAB: live ECG -->
+    <div class="wc wc--full">
+      <div class="wc-inner">
+        <svg width="100%" height="100%" viewBox="0 0 900 220" preserveAspectRatio="xMidYMid slice" style="display:block">
+          <defs>
+            <pattern id="ecg-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+              <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.035)" stroke-width="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="900" height="220" fill="#050505"/>
+          <rect width="900" height="220" fill="url(#ecg-grid)"/>
+          <g>
+            <path d="M0,110 L15,110 L20,97 L25,110 L38,110 L41,118 L47,25 L53,128 L58,110 L68,110 L77,88 L90,110 L120,110 L135,110 L140,97 L145,110 L158,110 L161,118 L167,25 L173,128 L178,110 L188,110 L197,88 L210,110 L240,110 L255,110 L260,97 L265,110 L278,110 L281,118 L287,25 L293,128 L298,110 L308,110 L317,88 L330,110 L360,110 L375,110 L380,97 L385,110 L398,110 L401,118 L407,25 L413,128 L418,110 L428,110 L437,88 L450,110 L480,110 L495,110 L500,97 L505,110 L518,110 L521,118 L527,25 L533,128 L538,110 L548,110 L557,88 L570,110 L600,110 L615,110 L620,97 L625,110 L638,110 L641,118 L647,25 L653,128 L658,110 L668,110 L677,88 L690,110 L720,110 L735,110 L740,97 L745,110 L758,110 L761,118 L767,25 L773,128 L778,110 L788,110 L797,88 L810,110 L840,110 L855,110 L860,97 L865,110 L878,110 L881,118 L887,25 L893,128 L898,110 L908,110 L917,88 L930,110 L960,110 L975,110 L980,97 L985,110 L998,110 L1001,118 L1007,25 L1013,128 L1018,110 L1028,110 L1037,88 L1050,110 L1080,110 L1095,110 L1100,97 L1105,110 L1118,110 L1121,118 L1127,25 L1133,128 L1138,110 L1148,110 L1157,88 L1170,110 L1200,110 L1215,110 L1220,97 L1225,110 L1238,110 L1241,118 L1247,25 L1253,128 L1258,110 L1268,110 L1277,88 L1290,110 L1320,110 L1335,110 L1340,97 L1345,110 L1358,110 L1361,118 L1367,25 L1373,128 L1378,110 L1388,110 L1397,88 L1410,110 L1440,110 L1455,110 L1460,97 L1465,110 L1478,110 L1481,118 L1487,25 L1493,128 L1498,110 L1508,110 L1517,88 L1530,110 L1560,110 L1575,110 L1580,97 L1585,110 L1598,110 L1601,118 L1607,25 L1613,128 L1618,110 L1628,110 L1637,88 L1650,110 L1680,110" fill="none" stroke="rgba(255,255,255,0.78)" stroke-width="1.5" stroke-linejoin="round"/>
+            <animateTransform attributeName="transform" type="translate" from="0 0" to="-720 0" dur="5s" repeatCount="indefinite"/>
+          </g>
+          <circle cx="38" cy="186" r="3.5" fill="#4ade80">
+            <animate attributeName="opacity" values="1;0.25;1" dur="1.8s" repeatCount="indefinite"/>
+          </circle>
+          <text x="50" y="191" fill="rgba(255,255,255,0.45)" font-family="Space Grotesk,sans-serif" font-size="10" letter-spacing="3" font-weight="500">LIVE SITE</text>
+          <text x="898" y="56" text-anchor="end" fill="rgba(255,255,255,0.04)" font-family="Space Grotesk,sans-serif" font-size="80" font-weight="700" letter-spacing="-3">FRP</text>
+        </svg>
+      </div>
+      <div class="wc-ov">
+        <p class="wc-cat">Healthcare · Web Design</p>
+        <p class="wc-name">First Responder Performance</p>
+        <a href="https://frpcollab.com" target="_blank" rel="noopener noreferrer" class="wc-link">Visit site &nbsp;→</a>
       </div>
     </div>
 
