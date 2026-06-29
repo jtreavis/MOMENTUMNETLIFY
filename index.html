@@ -23,7 +23,8 @@ a{text-decoration:none;color:inherit}
 /* NAV */
 nav{position:fixed;inset:0 0 auto 0;z-index:100;padding:28px 52px;display:flex;align-items:center;justify-content:space-between;transition:padding .4s,background .4s,border-color .4s;border-bottom:1px solid transparent}
 nav.scrolled{padding:16px 52px;background:rgba(0,0,0,.88);backdrop-filter:blur(14px);border-color:rgba(255,255,255,.07)}
-.nav-logo{font-size:14px;font-weight:700;letter-spacing:.42em;color:#fff}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;letter-spacing:.42em;color:#fff}
+.nav-logo img{height:28px;width:auto;filter:brightness(0) invert(1)}
 .nav-menu{display:flex;list-style:none;gap:40px}
 .nav-menu a{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);transition:color .3s}
 .nav-menu a:hover{color:#fff}
@@ -71,7 +72,8 @@ nav.scrolled{padding:16px 52px;background:rgba(0,0,0,.88);backdrop-filter:blur(1
 .circle-wrap{position:relative;width:290px;height:290px}
 .circle-svg{width:100%;height:100%;animation:spin 22s linear infinite}
 @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-.circle-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:96px;height:96px;border:1px solid rgba(255,255,255,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;letter-spacing:.05em}
+.circle-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:96px;height:96px;border:1px solid rgba(255,255,255,.12);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.circle-center img{width:52px;height:auto;filter:brightness(0) invert(1)}
 
 /* SERVICES */
 #services{padding:140px 80px;background:#fff;color:#000}
@@ -173,7 +175,8 @@ nav.scrolled{padding:16px 52px;background:rgba(0,0,0,.88);backdrop-filter:blur(1
 
 /* FOOTER */
 footer{padding:52px 80px;background:#000;display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,.07)}
-.ft-logo{font-size:14px;font-weight:700;letter-spacing:.42em}
+.ft-logo{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;letter-spacing:.42em}
+.ft-logo img{height:26px;width:auto;filter:brightness(0) invert(1)}
 .ft-links{display:flex;gap:32px;list-style:none}
 .ft-links a{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.35);transition:color .3s}
 .ft-links a:hover{color:#fff}
@@ -226,7 +229,7 @@ footer{padding:52px 80px;background:#000;display:flex;align-items:center;justify
 <div id="cur-ring"></div>
 
 <nav id="nav">
-  <a href="#" class="nav-logo">MOMENTUM</a>
+  <a href="#" class="nav-logo"><img src="logo.png" alt="Momentum">MOMENTUM</a>
   <ul class="nav-menu">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
@@ -283,7 +286,7 @@ footer{padding:52px 80px;background:#000;display:flex;align-items:center;justify
         <circle cx="145" cy="145" r="110" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
         <circle cx="145" cy="145" r="80" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
       </svg>
-      <div class="circle-center">M</div>
+      <div class="circle-center"><img src="logo.png" alt="Momentum"></div>
     </div>
   </div>
 </section>
@@ -586,7 +589,7 @@ footer{padding:52px 80px;background:#000;display:flex;align-items:center;justify
 
 <!-- FOOTER -->
 <footer>
-  <span class="ft-logo">MOMENTUM</span>
+  <span class="ft-logo"><img src="logo.png" alt="Momentum">MOMENTUM</span>
   <ul class="ft-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
